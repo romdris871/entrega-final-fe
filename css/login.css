@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  background-image: url("../img/logingbg.png");
+  background-size: contain;      /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: repeat; /* No repite la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* Estilos para los inputs */
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Estilos para el botón */
+.login button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos para los mensajes de error */
+.error {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
