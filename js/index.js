@@ -42,6 +42,11 @@ function validarForm() {
     esValido = false;
   } else {
     ocultarError('login_error');
+
+  // GUARDAR EN LOCALSTORAGE
+    localStorage.setItem("userEmail", usrEmail);
+    localStorage.setItem("loginDate", new Date().toLocaleString());
+    localStorage.setItem("isLoggedIn", "true");
   }
 
   return esValido;
@@ -71,4 +76,12 @@ btnIngresar.addEventListener('click', function(event) {
   if(validarForm()) {
     window.location.href = "../html/index.html";
   }
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedEmail = localStorage.getItem("userEmail");
+    if (savedEmail) {
+        document.getElementById('id_mail').value = savedEmail;
+        console.log("Email recuperado:", savedEmail);
+    }
 });
